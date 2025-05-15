@@ -1,0 +1,228 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>About Me</title> 
+    
+    <style> 
+        
+        body {
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
+            font-family: Arial, sans-serif; /* Sets the font type */
+            background-color: black; /* Sets the background color of the page to black */
+            color: white; /* Sets the default text color to white */
+            text-align: center; /* Centers text by default */
+            overflow-x: hidden; /* Prevents horizontal scrolling */
+        }
+
+        /* Logo Section */
+        .logo {
+            display: flex; /* Uses flexbox for layout */
+            justify-content: center; /* Centers the logo horizontally */
+            align-items: center; /* Aligns the logo vertically */
+            margin-bottom: 10px; /* Adds space below the logo */
+        }
+
+        .logo img {
+            height: 150px; /* Sets a fixed height for the logo */
+            width: 150px; /* Sets a fixed width for the logo */
+            object-fit: contain; /* Ensures the image retains its aspect ratio without being cropped */
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex; /* Uses flexbox for layout */
+            justify-content: center; /* Centers navigation links horizontally */
+            flex-wrap: wrap; /* Allows navigation links to wrap onto new lines on small screens */
+            background-color: black; /* Sets the background color of the navbar to black */
+            padding: 15px; /* Adds space inside the navbar */
+        }
+
+        .navbar a {
+            color: white; /* Sets text color to white */
+            text-decoration: none; /* Removes underline from links */
+            margin: 10px 15px; /* Adds space between links */
+            font-size: 1.5rem; /* Sets font size (1.5rem = 24px) */
+        }
+
+        .navbar a:hover {
+            text-decoration: underline; /* Underlines the link when hovered over */
+        }
+
+        /* Main Content Styling */
+        .content h1 {
+            font-size: 5vw; /* Makes font size responsive based on viewport width */
+            margin: 20px 0; /* Adds space above and below the heading */
+        }
+
+        .main p {
+            font-size: 3rem; /* Large text size for main content */
+        }
+
+        /* About Section */
+        .about-section {
+            display: flex; /* Uses flexbox for layout */
+            align-items: center; /* Aligns items vertically */
+            justify-content: center; /* Centers content horizontally */
+            flex-wrap: wrap; /* Allows wrapping for small screens */
+            padding: 20px; /* Adds padding around the section */
+        }
+
+        .about-section img {
+            width: 100%; /* Makes image take full width of the container */
+            max-width: 400px; /* Ensures the image does not exceed 400px */
+            height: auto; /* Maintains aspect ratio */
+            padding: 10px; /* Adds space around the image */
+        }
+
+        .about-text {
+            text-align: left; /* Aligns text to the left */
+            max-width: 500px; /* Restricts the width of the text container */
+            padding: 20px; /* Adds padding inside the text container */
+        }
+
+        /* Blue Bar for Separation */
+        .blue-bar {
+            height: 40px; /* Sets the height of the blue bar */
+            background-color: blue; /* Sets the background color to blue */
+            margin: 50px 0; /* Adds space above and below the bar */
+        }
+
+        /* Hobbies Section */
+        .hobbies {
+            display: grid; /* Uses grid layout for hobbies section */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Makes grid responsive */
+            gap: 20px; /* Adds space between grid items */
+            justify-items: center; /* Centers items within the grid */
+            padding: 20px; /* Adds padding around the section */
+        }
+
+        .hobbies img {
+            width: 100%; /* Ensures images take full width of their container */
+            max-width: 200px; /* Limits maximum width to 200px */
+            height: auto; /* Maintains aspect ratio */
+            border-radius: 10px; /* Rounds the corners of images */
+        }
+
+        /* Footer Styling */
+        .footer {
+            margin-top: 20px; /* Adds space above the footer */
+            font-size: 1rem; /* Sets font size */
+            padding: 10px; /* Adds padding inside the footer */
+        }
+
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column; /* Stacks navbar links vertically on small screens */
+                align-items: center; /* Centers the links */
+            }
+
+            .navbar a {
+                font-size: 1.2rem; /* Reduces font size for better readability */
+                margin: 5px; /* Reduces margin between links */
+            }
+
+            .content h1 {
+                font-size: 8vw; /* Adjusts font size for smaller screens */
+            }
+
+            .main p {
+                font-size: 1.5rem; /* Reduces text size for better readability */
+            }
+
+            .about-section {
+                flex-direction: column; /* Stacks image and text vertically */
+                text-align: center; /* Centers text */
+            }
+
+            .about-text {
+                text-align: center; /* Centers text */
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Logo Section -->
+        <div class="logo fade-in">
+            <img src="../Images/logo_2-removebg-preview.png" alt="Website Logo"/>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="../Home/Home_v1.html">Home</a> <!-- Link to Home Page -->
+            <a href="../About/About_v1.html">About</a> <!-- Link to About Page -->
+            <a href="../Contact/contact_v1.html">Contact</a> <!-- Link to Contact Page -->
+            <a href="../Projects/Project.html">Project</a> <!-- Link to Projects Page -->
+        </div>
+    </main>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>ABOUT ME!!!</h1> <!-- Main Heading -->
+
+        <!-- About Section -->
+        <div class="about-section">
+            <img src="../Images/Hobby cover.png" alt="Cover Image"/> <!-- Profile Image -->
+            <div class="about-text">
+                <div class="main">
+                    <p>Name: Leong Yu Hang</p>
+                    <p>Age: 18</p>
+                    <p>Co-curricular activities:</p>
+                </div>
+                <div class="activities">
+                    <p>
+                        Basketball<br>
+                        First Toa Payoh Primary School<br>
+                        Member (2015 – 2018)<br>
+                        School team (2017 – 2018)
+                    </p>
+                    <p>
+                        National Cadet Corps<br>
+                        Whitley Secondary School<br>
+                        Member (2019 – 2022)<br>
+                        Executive Committee (2020 – 2022)
+                    </p>
+                    <p>
+                        Field Hockey<br>
+                        Nanyang Polytechnic<br>
+                        Member (2023 – 2024)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blue Bar -->
+        <div class="blue-bar"></div>
+
+        <!-- Hobbies Section -->
+        <h2>HOBBIES</h2>
+        <p>Besides studying, there are a lot of other activities I love to do.</p>
+        <p>Below are some photos of my hobbies:</p>
+
+        <div class="hobbies">
+            <div>
+                <img src="../Images/pokemon.jpg" alt="Collecting Pokemon Cards"/>
+                <p>Collecting Pokémon cards</p>
+            </div>
+            <div>
+                <img src="../Images/Hobby 2.jpg" alt="Skiing"/>
+                <p>Skiing</p>
+            </div>
+            <div>
+                <img src="../Images/travel_hobby.jpg" alt="Travelling"/>
+                <p>Travelling</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        ©2025 Leong Yu Hang | All Rights Reserved
+    </div>
+</body>
+</html>
+

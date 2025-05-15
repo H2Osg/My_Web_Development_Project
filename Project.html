@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black; /* Background color of the page */
+            color: white; /* Text color */
+            text-align: center; /* Center-align the text */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        /* Logo Section */
+        .logo {
+            margin-bottom: 5px; /* Adds spacing between the logo and the navbar */
+            display: flex;
+            justify-content: center; /* Centers the logo horizontally */
+            align-items: center; /* Centers the logo vertically */
+        }
+
+        .logo img {
+            height: 200px;
+            width: 200px;   
+            object-fit: contain; /* Ensures the logo maintains aspect ratio */
+        }
+
+        /* Navbar Section */
+        .navbar {
+            display: flex;
+            justify-content: center; /* Centers navbar links */
+            background-color: black; /* Background color of navbar */
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            z-index: 1000; /* Ensures the navbar stays on top */
+        }
+
+        .navbar a {
+            color: white; /* Text color for navbar links */
+            text-decoration: none; /* Removes underline from links */
+            margin: 0 20px; /* Adds horizontal spacing between links */
+            font-size: 24px; /* Font size of navbar links */
+            line-height: 80px; /* Ensures vertical alignment of navbar links */
+        }
+
+        .navbar a:hover {
+            text-decoration: underline; /* Underlines links when hovered */
+        }
+
+        /* Grid Layout for Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+            gap: 20px; /* Adds space between project cards */
+            padding: 20px; /* Padding around the grid */
+        }
+
+        /* Individual Project Cards */
+        .project-card {
+            background-color: #333; /* Background color of the project card */
+            border-radius: 10px; /* Rounded corners */
+            padding: 10px; /* Padding inside the project card */
+            text-align: center; /* Center-align the text inside each card */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+            transition: opacity 0.6s, transform 0.6s; /* Smooth transition for opacity and movement */
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px; /* Fixed height for project images */
+            object-fit: cover; /* Ensures the images fit without distortion */
+            border-radius: 8px; /* Rounded corners for images */
+        }
+
+        .project-card h3 {
+            margin-top: 10px; /* Adds space above the title */
+            font-size: 18px; /* Font size for the project title */
+        }
+
+        /* Vibration Effect on Hover */
+        @keyframes vibrate {
+            0% { transform: translateX(0); } /* No movement at start */
+            20% { transform: translateX(-5px); } /* Move slightly left */
+            40% { transform: translateX(5px); } /* Move slightly right */
+            60% { transform: translateX(-5px); } /* Move slightly left again */
+            80% { transform: translateX(5px); } /* Move slightly right again */
+            100% { transform: translateX(0); } /* Return to the original position */
+        }
+
+        /* Apply vibration on hover */
+        .project-card:hover {
+            animation: vibrate 0.5s ease-in-out; /* Vibrate the card when hovered */
+        }
+    </style>
+</head>
+<body>
+    <Main>
+        <div class="logo">
+            <img src="../Images/logo_2-removebg-preview.png" alt="logo of website" height="200" width="200"/>
+        </div>
+        <div class="navbar bg-black py-4">
+            <a class="text-white mx-4 text-xl hover:underline" href="../Home/Home_v1.html">Home</a>
+            <a class="text-white mx-4 text-xl hover:underline" href="../About/About_v1.html">About</a>
+            <a class="text-white mx-4 text-xl hover:underline" href="../Contact/contact_v1.html">Contact</a>
+            <a class="text-white mx-4 text-xl hover:underline" href="../Projects/Project.html">Project</a>
+        </div>
+    </Main>
+
+    <!-- Projects Section -->
+    <div class="projects">
+        <!-- Project 1 to 9 -->
+        <div class="project-card">
+            <img src="../Images/Projects/Animal Shelter Volunteer.png" alt="Project 1">
+            <h3>Volunteering at an Animal Shelter</h3>
+        </div>
+
+        <div class="project-card">
+            <img src="../Images/Projects/audio design.jpg" alt="Project 2">
+            <h3>Audio Design</h3>
+        </div>
+
+        <div class="project-card">
+            <img src="../Images/Projects/Community Recycling Initiative.jpg" alt="Project 3">
+            <h3>Community Recycling Initiative</h3>    
+        </div>
+
+        <div class="project-card">
+            <img src="../Images/Projects/Food Bank Volunteer.png" alt="Project 4">
+            <h3>Food Bank Volunteer</h3>
+        </div>
+
+        <div class="project-card">
+            <img src="../Images/Projects/light show.jpg" alt="Project 5">
+            <h3>Light Show</h3>
+        </div>
+
+        <div class="project-card">
+            <img src="../Images/Projects/national camp.jpg" alt="Project 6">
+            <h3>National Camp</h3>
+        </div>
+
+        <div class="project-card">
+            <img src="../Images/Projects/snake game.png" alt="Project 7">
+            <h3>Snake Game</h3>
+        </div>
+
+        <div class="project-card">
+            <img src="../Images/Projects/Sustainable Farming Solutions.png" alt="Project 8">
+            <h3>Sustainable Farming Solutions</h3>
+        </div>
+
+        <div class="project-card">
+            <img src="../Images/Projects/nyp open house.png" alt="Project 9">
+            <h3>NYP Open House 2025</h3>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        ©2025 Leong Yu Hang | All Rights Reserved
+    </div>
+</body>
+</html>
+

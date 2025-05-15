@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        
+        /* Fade-in Animation */
+        /* This class starts with opacity 0 and gradually makes the element visible */
+        .fade-in {
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 2s ease-in-out forwards; /* 2-second fade-in effect */
+            will-change: opacity; /* Optimizes rendering for performance */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0; /* Start fully transparent */
+            }
+            to {
+                opacity: 1; /* End fully visible */
+            }
+        }
+
+        /* Slide-in Animation */
+        /* This class moves elements from the top (-100%) into position */
+        .slide-in {
+            opacity: 0; /* Initially hidden */
+            transform: translateY(-100%); /* Start position: moved up */
+            animation: slideIn 1s ease-in-out forwards; /* 1-second slide-down effect */
+            will-change: transform, opacity; /* Improves animation performance */
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%); /* Start off-screen (above) */
+                opacity: 0; /* Fully transparent */
+            }
+            to {
+                transform: translateY(0); /* Move to normal position */
+                opacity: 1; /* Fully visible */
+            }
+        }
+
+        /* This class is used when elements enter the viewport (controlled via JavaScript) */
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Logo */
+        .logo {
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 200px;
+            width: 200px;
+            object-fit: contain;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            height: 80px;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 24px;
+            line-height: 80px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            margin-top: 50px;
+            padding: 50px 0;
+        }
+
+        .contact-section h1 {
+            font-size: 64px;
+            margin-bottom: 30px;
+        }
+
+        /* Contact Info Grid */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(3, 300px);
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .contact-info div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-info img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info img:hover {
+            transform: scale(1.1);
+        }
+
+        .contact-info span {
+            margin-top: 10px;
+            font-size: 20px;
+            color: white;
+        }
+
+        /* Green Bar */
+        .green-bar {
+            height: 40px;
+            background-color: #00a651;
+            margin: 50px 0;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            padding: 30px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            font-size: large;
+        }
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-weight: 500;
+            color: white;
+        }
+        .contact-form .form-group {
+            margin-bottom: 15px;
+        }
+        .contact-form .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: white;
+        }
+        .contact-form .form-group input,
+        .contact-form .form-group textarea,
+        .contact-form .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .contact-form .form-group textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        .contact-form .form-group button {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .contact-form .form-group button:hover {
+            background: #0056b3;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo fade-in">
+        <img src="../Images/logo_2-removebg-preview.png" alt="logo" />
+    </div>
+    <div class="navbar slide-in">
+        <a href="../Home/Home_v1.html">Home</a>
+        <a href="../About/About_v1.html">About</a>
+        <a href="../Contact/contact_v1.html">Contact</a>
+        <a href="../Projects/Project.html">Project</a>
+    </div>
+    <div class="contact-section fade-in">
+        <h1>CONTACT</h1>
+        <div class="contact-info">
+            <div class="slide-in">
+                <a href="https://www.instagram.com/yu_h4ng" target="_blank">
+                    <img src="../Images/Instagram.png" alt="Instagram">
+                </a>
+                <span>Instagram</span>
+            </div>
+            <div class="slide-in">
+                <a href="https://www.facebook.com/yu_h4ng" target="_blank">
+                    <img src="../Images/facebook.png" alt="Facebook">
+                </a>
+                <span>Facebook</span>
+            </div>
+            <div class="slide-in">
+                <a href="mailto:leongyuhang794@gmail.com">
+                    <img src="../Images/email.png" alt="Email">
+                </a>
+                <span>Email</span>
+            </div>
+        </div>
+        <div class="green-bar"></div>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" required type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" required type="email" />
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input id="subject" name="subject" required type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="enquiry">Purpose of Enquiry</label>
+                    <select id="enquiry" name="enquiry" required>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Support</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="partnership">Partnership</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="communication">Preferred Method of Communication</label>
+                    <select id="communication" name="communication" required>
+                        <option value="email">Email</option>
+                        <option value="phone">Phone</option>
+                        <option value="none">No Preference</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer fade-in">©2025 Leong Yu Hang | All Rights Reserved</div>
+</body>
+</html>

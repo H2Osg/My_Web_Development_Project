@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        /* Logo */
+        .logo {
+            margin-bottom: 5px; /* Adds spacing between the logo and the navbar */
+            display: flex;
+            justify-content: center; /* Centers the logo horizontally */
+            align-items: center;
+        }
+
+        .logo img {
+            height: 200px;
+            width: 200px;   
+            object-fit: contain; /* Ensures the logo maintains aspect ratio */
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 24px;
+            line-height: 80px; /* Ensure alignment in navbar */
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .intro {
+            font-size: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            overflow: hidden; /* Ensures the text doesn't overflow */
+            white-space: nowrap; /* Prevents text from wrapping */
+        }
+
+        /* Fade-in Animation: Gradually makes elements visible over 2 seconds */
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0; /* Start fully transparent */
+            }
+            to {
+                opacity: 1; /* End fully visible */
+            }
+        }
+
+        /* Slide-in Animation: Moves elements from the top into position */
+        .slide-in {
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%); /* Start above the viewport */
+                opacity: 0; /* Start fully transparent */
+            }
+            to {
+                transform: translateY(0); /* End in the correct position */
+                opacity: 1; /* Fully visible */
+            }
+        }
+
+        /* Typewriter Effect: Simulates typing text with a blinking cursor */
+        .typewriter {
+            overflow: hidden; /* Hides overflowing text for typing effect */
+            border-right: .15em solid black; /* Simulates a blinking cursor */
+            white-space: nowrap; /* Prevents line breaks */
+            margin: 0 auto;
+            letter-spacing: .15em; /* Adds spacing between letters */
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 } /* Start with no text visible */
+            to { width: 100% } /* Reveal full text */
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent } /* Cursor disappears */
+            50% { border-color: black; } /* Cursor blinks */
+        }
+
+        /* Main Image Section: Adds a glow effect around the main image */
+        .main_image {
+            margin-top: 60px;
+            position: relative;
+            display: inline-block; /* Ensures glow effect stays within image bounds */
+        }
+
+        .main_image img {
+            position: relative;
+            z-index: 1; /* Ensures image is above the glow effect */
+        }
+
+        /* Glow Effect: Creates a glowing aura around the image */
+        .main_image::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the glow */
+            width: calc(100% + 40px); /* Slightly larger than the image */
+            height: calc(100% + 40px); /* Slightly larger than the image */
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0));
+            z-index: 0; /* Places glow behind the image */
+            border-radius: 50%; /* Optional: for a circular glow effect */
+            filter: blur(20px); /* Creates a soft blur */
+            animation: glow 2s infinite alternate; /* Continuously fades in and out */
+        }
+
+        /* Glow Animation: Creates a pulsating effect */
+        @keyframes glow {
+            from {
+                opacity: 0.5; /* Glow starts dim */
+            }
+            to {
+                opacity: 1; /* Glow brightens */
+            }
+        }
+
+        
+        footer{
+            padding: 40px;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo fade-in mt-10">
+        <img src="../Images/logo_2-removebg-preview.png" alt="logo of website" height="200"  width="200"/>
+    </div>
+    <div class="navbar bg-black py-4 slide-in">
+        <a class="text-white mx-4 text-xl hover:underline" href="../Home/Home_v1.html">
+         Home
+        </a>
+        <a class="text-white mx-4 text-xl hover:underline" href="../About/About_v1.html">
+         About
+        </a>
+        <a class="text-white mx-4 text-xl hover:underline" href="../Contact/contact_v1.html">
+         Contact
+        </a>
+        <a class="text-white mx-4 text-xl hover:underline" href="../Projects/Project.html">
+         Project
+        </a>
+    </div>
+    <main>
+       <div class="intro mt-10 text-center">
+        <p class="text-4xl font-bold typewriter" id="line1">
+         Hi, my name is Yu Hang. I am a student 
+        </p>
+        <p class="text-4xl font-bold typewriter" id="line2">
+        from Nanyang Polytechnic studying Infocomm
+        </p>
+        <p class="text-4xl font-bold typewriter" id="line3">
+        and media engineering. Please have a look 
+        </p>
+        <p class="text-4xl font-bold typewriter" id="line4">
+        at my projects and get to know me better.
+        </p>
+       </div>
+    </main>
+    <div class="main_image">
+        <img src="../Images/main.png">
+    </div>
+</body>
+<footer>
+    © 2023 Yu Hang. All rights reserved.
+</footer>
+</html>
